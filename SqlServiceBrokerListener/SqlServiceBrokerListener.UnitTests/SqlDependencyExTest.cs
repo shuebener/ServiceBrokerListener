@@ -1,22 +1,20 @@
-﻿namespace ServiceBrokerListener.UnitTests
+﻿using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using NUnit.Framework;
+using SqlServiceBrokerListener;
+
+namespace ServiceBrokerListener.UnitTests
 {
-    using System;
-    using System.Data;
-    using System.Data.SqlClient;
-    using System.Linq;
-    using System.Text;
-    using System.Threading;
-
-    using NUnit.Framework;
-
-    using ServiceBrokerListener.Domain;
-
-    /// <summary>
-    /// TODO: 
-    /// 1. Performance test.
-    /// 2. Check strange behavior.
-    /// </summary>
-    [TestFixture]
+	/// <summary>
+	/// TODO: 
+	/// 1. Performance test.
+	/// 2. Check strange behavior.
+	/// </summary>
+	[TestFixture]
     public class SqlDependencyExTest
     {
         private const string MASTER_CONNECTION_STRING =

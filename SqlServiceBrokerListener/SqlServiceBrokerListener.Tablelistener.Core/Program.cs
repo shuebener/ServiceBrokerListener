@@ -1,8 +1,8 @@
-﻿using CommandLine;
-using ServiceBrokerListener.Domain;
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Threading;
+using CommandLine;
+using SqlServiceBrokerListener;
 
 namespace ServiceBrokerListener.TableListener.Core
 {

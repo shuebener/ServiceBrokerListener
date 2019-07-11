@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+		
+	<PropertyGroup>
+		<AssemblyTitle>ServiceBrokerListener.UnitTests.Core</AssemblyTitle>
+		<AssemblyName>ServiceBrokerListener.UnitTests.Core</AssemblyName>
+		<TargetFramework>netcoreapp2.1</TargetFramework>
+		<IsPackable>false</IsPackable>
+		<PackageTargetFallback>$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Include="..\SqlServiceBrokerListener.UnitTests\SqlDependencyExTest.cs" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<PackageReference Include="nunit" Version="3.11.0" />
+		<PackageReference Include="NUnit3TestAdapter" Version="3.11.0" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+		<ProjectReference Include="..\SqlServiceBrokerListener\SqlServiceBrokerListener.csproj" />
+	</ItemGroup>
+
+</Project>

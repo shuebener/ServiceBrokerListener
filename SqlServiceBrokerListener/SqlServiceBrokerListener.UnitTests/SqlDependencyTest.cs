@@ -1,15 +1,12 @@
-﻿namespace ServiceBrokerListener.UnitTests
+﻿using System.Data;
+using System.Data.SqlClient;
+using System.Threading;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SqlServiceBrokerListener;
+using Assert = NUnit.Framework.Assert;
+
+namespace ServiceBrokerListener.UnitTests
 {
-    using System.Data;
-    using System.Data.SqlClient;
-    using System.Threading;
-
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-    using ServiceBrokerListener.Domain;
-
-    using Assert = NUnit.Framework.Assert;
-
     [TestClass]
     public class SqlDependencyTest
     {

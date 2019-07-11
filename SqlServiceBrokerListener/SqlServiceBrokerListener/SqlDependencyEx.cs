@@ -1,17 +1,17 @@
-﻿using System.IO;
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+using System.IO;
 using System.Xml;
 
-namespace ServiceBrokerListener.Domain
+namespace SqlServiceBrokerListener
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Data;
-    using System.Data.SqlClient;
-    using System.Linq;
-    using System.Text;
-    using System.Threading;
-    using System.Xml.Linq;
-
     public sealed class SqlDependencyEx : IDisposable
     {
         [Flags]
@@ -790,7 +790,11 @@ namespace ServiceBrokerListener.Domain
             var evnt = NotificationProcessStopped;
             if (evnt == null) return;
 
-            evnt.BeginInvoke(this, EventArgs.Empty, null, null);
-        }
-    }
+#if NETSTANDARD
+			Task.Run(() => evnt.Invoke(this, EventArgs.Empty));
+#else
+			evnt.BeginInvoke(this, EventArgs.Empty, null, null);
+#endif
+		}
+	}
 }
