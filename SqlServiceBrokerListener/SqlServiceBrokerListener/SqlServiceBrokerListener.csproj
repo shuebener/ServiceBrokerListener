@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-	<PropertyGroup>
+	<PropertyGroup>		
 		<AssemblyTitle>SqlServiceBrokerListener</AssemblyTitle>
 		<RootNamespace>SqlServiceBrokerListener</RootNamespace>
 		<TargetFrameworks>net40;netstandard1.6</TargetFrameworks>
@@ -11,23 +11,25 @@
 		<Authors>Sebastian Huebener</Authors>
 		<Copyright>Copyright © 2019 - Sebastian Huebener</Copyright>
 		<NeutralLanguage>en</NeutralLanguage>
-		<Description>
-			Cross-platform .NET 4.0 / .NET Standard 1.6 component which receives SQL Server table changes into your .net code.
-			Take a look how it works: http://sbl.azurewebsites.net
-		</Description>
+		<Title>SqlServiceBrokerListener</Title>
+		<Description>Cross-platform .NET 4.0 / .NET Standard 1.6 component which receives SQL Server table changes into your .net code.
+Take a look how it works: http://sbl.azurewebsites.net</Description>
 		<DocumentationFile>$(TargetDir)\SqlServiceBrokerListener.xml</DocumentationFile>
 	</PropertyGroup>
 	
 	<PropertyGroup>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<PackageProjectUrl>https://github.com/shuebener/ServiceBrokerListener</PackageProjectUrl>
+		<PackageProjectUrl>https://github.com/shuebener/SqlServiceBrokerListener</PackageProjectUrl>
 		<RepositoryType>git</RepositoryType>
-		<RepositoryUrl>https://github.com/shuebener/ServiceBrokerListener.git</RepositoryUrl>
+		<RepositoryUrl>https://github.com/shuebener/SqlServiceBrokerListener.git</RepositoryUrl>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<!--<AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>-->
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>		
-		<IncludeSymbols>true</IncludeSymbols>
+		<IncludeSymbols>true</IncludeSymbols>		
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageReleaseNotes />
+		<PackageTags>MS SQL ServiceBroker</PackageTags>
 	</PropertyGroup>
 
 	<ItemGroup>
